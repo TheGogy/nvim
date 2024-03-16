@@ -1,6 +1,13 @@
 return {
 	{ "shaunsingh/oxocarbon.nvim" },
-	{ "ellisonleao/gruvbox.nvim" },
+	{
+		"ellisonleao/gruvbox.nvim",
+		config = function()
+			require("gruvbox").setup({
+				transparent_mode = true,
+			})
+		end,
+	},
 	{
 		"tokyonight.nvim",
 		priority = 1000,

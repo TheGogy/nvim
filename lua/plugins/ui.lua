@@ -20,6 +20,9 @@ return {
 						[[⡕⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿⠁⣠]],
 						[[⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙]],
 						[[⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣]],
+						[[]],
+						[[	 ~ nvim ~]],
+						[[]],
 					},
 					footer = {},
 					shortcut = {
@@ -31,7 +34,7 @@ return {
 							key = "f",
 						},
 						{
-							desc = " Find String",
+							desc = "󰅳 Find String",
 							group = "DiagnosticHint",
 							action = "Telescope live_grep",
 							key = "s",
