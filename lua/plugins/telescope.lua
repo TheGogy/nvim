@@ -14,4 +14,24 @@ return {
 			desc = "Find Plugin File",
 		},
 	},
+	config = function()
+		require("telescope").setup({
+			pickers = {
+				buffers = {
+					sort_mru = true,
+					previewer = true,
+					-- theme = "ivy",
+				},
+			},
+			defaults = {
+				prompt_prefix = "> ",
+				border = {},
+				-- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+				-- Hacky border disabling
+				borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+				color_devicons = true,
+				use_less = true,
+			},
+		})
+	end,
 }

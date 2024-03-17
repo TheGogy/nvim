@@ -56,5 +56,65 @@ return {
 		"nvim-lualine/lualine.nvim",
 		lazy = false,
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = function()
+			require("lualine").setup({
+				options = {
+					icons_enabled = true,
+					component_separators = "|",
+					section_separators = "",
+				},
+				lualine_a = {
+					{
+						"buffers",
+					},
+				},
+			})
+		end,
+	},
+
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		opts = function()
+			require("noice").setup({
+				presets = {
+					command_palette = true,
+				},
+				views = {
+					cmdline_popup = {
+						position = {
+							row = 5,
+							col = "50%",
+						},
+						size = {
+							width = 60,
+							height = "auto",
+						},
+						border = {
+							style = "double",
+						},
+					},
+					popupmenu = {
+						relative = "editor",
+						position = {
+							row = 8,
+							col = "50%",
+						},
+						size = {
+							width = 60,
+							height = 10,
+						},
+						border = {
+							style = "double",
+							padding = { 0, 1 },
+						},
+						win_options = {
+							winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+						},
+					},
+				},
+			})
+		end,
 	},
 }
