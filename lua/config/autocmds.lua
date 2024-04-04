@@ -2,8 +2,6 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
-
--- Fix colours for telescope
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "#232530" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#232530" })
 vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg = "#232530" })
