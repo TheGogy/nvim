@@ -10,14 +10,7 @@ return {
         right_trunc_marker = "",
         always_show_bufferline = true,
         show_close_icon = false,
-
-        -- offsets = {
-        --  text = "EXPLORER",
-        --  filetype = "neo-tree",
-        --  highlight = "PanelHeading",
-        --  text_align = "left",
-        --  seperator = true,
-        -- },
+        show_buffer_close_icons = false,
       },
     })
   end,

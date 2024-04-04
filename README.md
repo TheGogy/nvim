@@ -1,6 +1,7 @@
 # Neovim config
 
 My neovim config for studying, using [lazyvim](https://lazyvim.org).
+For full functionality, you may want to check out my configurations for [tmux](https://github.com/TheGogy/tmux/) and [foot](https://github.com/TheGogy/dotfiles/blob/main/foot/foot.ini).
 
 ## Contents
 * [Installation](#installation)
