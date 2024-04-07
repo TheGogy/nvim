@@ -14,3 +14,6 @@ vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = "#232530" })
 vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg = "#232530" })
 vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = "#232530" })
 vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { bg = "#232530" })
+
+-- Change colour of vertical split
+vim.api.nvim_set_hl(0, "VertSplit", { fg = "#F09383" })

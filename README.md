@@ -46,6 +46,7 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 
 # Showcase
 ![Showcase dashboard](./showcase/dashboard.png)
+![Showcase busy](./showcase/busy.png)
 ![Showcase normal](./showcase/normal.png)
 ![Showcase find files](./showcase/find_files.png)
 ![Showcase terminal](./showcase/terminal.png)
