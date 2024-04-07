@@ -33,7 +33,6 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 
 | Keymap        | Command                                    |
 | ------------- | ------------------------------------------ |
-| `alt` + `t`   | Toggle terminal                            |
 | `alt` + `.`   | Switch to right buffer (same for neo-tree) |
 | `alt` + `,`   | Switch to left buffer (same for neo-tree)  |
 | `alt` + `<n>` | Switch to buffer <n>                       |
