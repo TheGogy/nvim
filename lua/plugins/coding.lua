@@ -7,6 +7,7 @@ return {
         "stylua",
         "luacheck",
         "clangd",
+        "pyright",
       })
     end,
   },
