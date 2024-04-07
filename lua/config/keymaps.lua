@@ -8,7 +8,7 @@ local opts = { noremap = true, silent = true }
 keymap("n", "<A-,>", "<Cmd>BufferLineCyclePrev<CR>", opts)
 keymap("n", "<A-.>", "<Cmd>BufferLineCycleNext<CR>", opts)
 
--- Re-order to previous/next: alt + shift + < >
+-- Re-order to previous/next: alt + < >
 -- NOTE: workaround for some terminals.
 -- change to "<A-<>" and "<A->>" if it doesn't work.
 keymap("n", "<M-S-,>", "<Cmd>BufferLineMovePrev<CR>", opts)

@@ -21,6 +21,10 @@ return {
             bg = "#232530",
             fg = "#E9436F"
           },
+          modified_selected = {
+            bg = "#232530",
+            fg = "#FAB28E",
+          },
           fill = {
             bg = "#1C1E26",
           },

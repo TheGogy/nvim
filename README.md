@@ -35,6 +35,8 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 | ------------- | ------------------------------------------ |
 | `alt` + `.`   | Switch to right buffer (same for neo-tree) |
 | `alt` + `,`   | Switch to left buffer (same for neo-tree)  |
+| `alt` + `<`   | Switch current buffer with left buffer     |
+| `alt` + `>`   | Switch current buffer with right buffer    |
 | `alt` + `<n>` | Switch to buffer <n>                       |
 | `alt` + `p`   | Toggle pin for active buffer               |
 | `alt` + `w`   | Close active buffer                        |
@@ -43,6 +45,10 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 | `<leader>fw`  | Telescope live_grep                        |
 | `<leader>ff`  | Telescope find_files                       |
 | `<leader>ci`  | Find Nerd Fonts icon                       |
+
+
+> [!NOTE]
+> This setup is using a workaround for `alt` + `< >`, to ensure compatibility for foot terminal. If this is causing problem for your terminal, see [`keymaps.lua`](./lua/config/keymaps.lua).
 
 # Showcase
 ![Showcase dashboard](./showcase/dashboard.png)
