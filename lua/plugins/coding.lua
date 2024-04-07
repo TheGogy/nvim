@@ -6,6 +6,7 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "stylua",
         "luacheck",
+        "clangd",
       })
     end,
   },
