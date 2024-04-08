@@ -37,7 +37,7 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 | `alt` + `,`   | Switch to left buffer (same for neo-tree)  |
 | `alt` + `<`   | Switch current buffer with left buffer     |
 | `alt` + `>`   | Switch current buffer with right buffer    |
-| `alt` + `<n>` | Switch to buffer <n>                       |
+| `alt` + `<n>` | Switch to buffer `<n>`                     |
 | `alt` + `p`   | Toggle pin for active buffer               |
 | `alt` + `w`   | Close active buffer                        |
 | `alt` + `W`   | Close all buffers except active buffer     |
