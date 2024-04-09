@@ -1,7 +1,10 @@
 return {
   "NvChad/nvim-colorizer.lua",
-  event = "VeryLazy",
-  config = function()
-    require("colorizer").setup({})
+  event = "BufEnter",
+  config = function(_, opts)
+    require("colorizer").setup(opts)
+    vim.defer_fn(function()
+      require("colorizer").attach_to_buffer(0)
+    end, 0)
   end,
 }
