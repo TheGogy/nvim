@@ -21,8 +21,8 @@ paru -S ripgrep fd
 git clone https://github.com/TheGogy/nvim ~/.config/nvim
 
 # Remove unneccessary stuff
-rm -f ~/.config/nvim/showcase
-rm -f ~/.config/nvim/.git
+rm -rf ~/.config/nvim/showcase
+rm -rf ~/.config/nvim/.git
 
 nvim
 ```
