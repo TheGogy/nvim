@@ -1,19 +1,31 @@
--- Change some highlights to fit better with theme
--- Current theme: horizon (https://horizontheme.netlify.app/)
+local bg1 = "#504945"
+local bg2 = "#a89984"
+local bg3 = "#d4be98"
+local bg4 = "#ea6962"
 
--- Change telescope colours
-vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "#232530" })
-vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "#232530" })
-vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", { bg = "#232530" })
-vim.api.nvim_set_hl(0, "TelescopeMatching", { bg = "#232530" })
-vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "#2E303E" })
-vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = "#E95678", fg = "#06060C" })
-vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { bg = "#2E303E" })
-vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "#2E303E" })
-vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { bg = "#232530" })
-vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { bg = "#232530" })
-vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { bg = "#232530" })
-vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { bg = "#232530" })
+local fg1 = "#06060c"
+-- local fg2 = "#282828"
 
--- Change colour of vertical split
-vim.api.nvim_set_hl(0, "VertSplit", { fg = "#F09383" })
+local spl = "#a9b482"
+
+local highlights = {
+    TelescopeNormal =         { bg = bg1 },
+    TelescopeBorder =         { bg = bg1 },
+    TelescopeSelectionCaret = { bg = bg3 },
+    TelescopeSelection =      { bg = bg3, fg = fg1 },
+    TelescopeMatching =       { bg = bg2 },
+    TelescopePromptNormal =   { bg = bg2, fg = fg1 },
+    TelescopePromptTitle =    { bg = bg4, fg = fg1 },
+    TelescopePromptPrefix =   { bg = bg2 },
+    TelescopePromptBorder =   { bg = bg2 },
+    TelescopePreviewTitle =   { bg = bg1 },
+    TelescopePreviewBorder =  { bg = bg1 },
+    TelescopeResultsTitle =   { bg = bg1 },
+    TelescopeResultsBorder =  { bg = bg1 },
+    VertSplit =               { fg = spl }
+}
+
+for hl_group, attrs in pairs(highlights) do
+    vim.api.nvim_set_hl(0, hl_group, attrs)
+end
+
