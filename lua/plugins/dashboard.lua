@@ -44,7 +44,7 @@ local header_neovim = {
 
 return {
   "nvimdev/dashboard-nvim",
-  event = "VimEnter",
+  event = "BufWinEnter",
   config = function()
     require("dashboard").setup({
       theme = "hyper",

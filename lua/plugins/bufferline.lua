@@ -1,7 +1,8 @@
 return {
   {
     "akinsho/bufferline.nvim",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufAdd", "BufNewFile" },
+    lazy = true,
     config = function()
       require("bufferline").setup({
         options = {
@@ -34,6 +35,7 @@ return {
   },
   {
     "famiu/bufdelete.nvim",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufAdd", "BufNewFile" },
+    lazy = true,
   }
 }
