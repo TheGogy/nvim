@@ -60,10 +60,10 @@ return {
             key = "f",
           },
           {
-            desc = "󰅳 Find String",
+            desc = "󰅳 Find Words",
             group = "DiagnosticHint",
             action = "Telescope live_grep",
-            key = "s",
+            key = "w",
           },
           {
             desc = " Colorschemes",
