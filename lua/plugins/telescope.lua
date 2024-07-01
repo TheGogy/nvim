@@ -21,7 +21,7 @@ return {
         border = {},
         -- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
         -- Hacky border disabling
-        borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+        -- borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
         color_devicons = true,
         use_less = true,
       },

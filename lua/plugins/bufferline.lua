@@ -14,20 +14,20 @@ return {
         },
         highlights = { -- gruvbox theme
           buffer_selected = {
-            bg = "#1d2021",
+            bg = "#15161e",
             fg = "#e78a4e",
             bold = true,
           },
           indicator_selected = {
-            bg = "#1d2021",
+            bg = "#15161e",
             fg = "#7de0a3"
           },
           modified_selected = {
-            bg = "#1d2021",
+            bg = "#15161e",
             fg = "#e78a4e",
           },
           fill = {
-            bg = "#1d2021",
+            bg = "#15161e",
           },
         }
       })

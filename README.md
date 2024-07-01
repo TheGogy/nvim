@@ -6,7 +6,6 @@ For full functionality, you may want to check out my configurations for [tmux](h
 ## Contents
 * [Installation](#installation)
 * [Keymaps](#Keymaps)
-* [Showcase](#Showcase)
 
 # Installation 
 I'm using [paru](https://github.com/morganmilo/paru) as my AUR helper, make sure to change that to your package manager if required.
@@ -21,7 +20,6 @@ paru -S ripgrep fd
 git clone https://github.com/TheGogy/nvim ~/.config/nvim
 
 # Remove unneccessary stuff
-rm -rf ~/.config/nvim/showcase
 rm -rf ~/.config/nvim/.git
 
 nvim
@@ -52,12 +50,3 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 
 > [!NOTE]
 > This setup is using a workaround for `alt` + `< >`, to ensure compatibility for foot terminal. If this is causing problem for your terminal, see [`keymaps.lua`](./lua/config/keymaps.lua).
-
-# Showcase
-![Showcase dashboard](./showcase/dashboard.png)
-![Showcase busy](./showcase/busy.png)
-![Showcase normal](./showcase/normal.png)
-![Showcase find files](./showcase/find_files.png)
-![Showcase terminal](./showcase/terminal.png)
-
-The script to print colours in the terminal can be found [here](https://gist.github.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263).
