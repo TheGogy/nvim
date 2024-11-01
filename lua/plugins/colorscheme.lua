@@ -1,20 +1,18 @@
 return {
-    -- {
-    --   "sainnhe/gruvbox-material",
-    --   config = function()
-    --   -- foreground option can be material, mix, or original
-    --   vim.g.gruvbox_material_foreground = "material"
-    --   --background option can be hard, medium, soft
-    --   vim.g.gruvbox_material_background = "hard"
-    --   vim.g.gruvbox_material_enable_bold = 1
-    --   vim.g.gruvbox_material_enable_italic = 1
-    --   vim.g.gruvbox_material_better_performance = 1
-    --
-    --   vim.cmd([[colorscheme gruvbox-material]])
-    -- end,
-    --   priority = 1000,
-    --   lazy = false,
-    -- },
+    {
+      "sainnhe/gruvbox-material",
+      config = function()
+      -- foreground option can be material, mix, or original
+      vim.g.gruvbox_material_foreground = "mix"
+      --background option can be hard, medium, soft
+      vim.g.gruvbox_material_background = "hard"
+      vim.g.gruvbox_material_enable_bold = 1
+      vim.g.gruvbox_material_enable_italic = 0
+      vim.g.gruvbox_material_better_performance = 1
+    end,
+      priority = 1000,
+      lazy = false,
+    },
 
     -- {
     --   "akinsho/horizon.nvim",
@@ -65,9 +63,9 @@ return {
     --     })
     --   end,
     -- },
-    {
-        "tiagovla/tokyodark.nvim",
-        lazy = false,
-        priority = 1000;
-    }
+    -- {
+    --     "tiagovla/tokyodark.nvim",
+    --     lazy = false,
+    --     priority = 1000;
+    -- }
 }
