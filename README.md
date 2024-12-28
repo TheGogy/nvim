@@ -39,7 +39,7 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 | `alt` + `p`   | Toggle pin for active buffer               |
 | `alt` + `w`   | Close active buffer                        |
 | `alt` + `W`   | Close all buffers except active buffer     |
-| `<leader>/`   | Toggle comment                             |
+| `<leader>;`   | Toggle comment                             |
 | `<leader>fw`  | Telescope live_grep                        |
 | `<leader>ff`  | Telescope find_files                       |
 | `<leader>ci`  | Find Nerd Fonts icon                       |
