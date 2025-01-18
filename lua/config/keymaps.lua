@@ -30,5 +30,4 @@ keymap("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
 keymap("n", "<A-p>", "<Cmd>BufferLineTogglePin<CR>", opts)
 
 -- Close buffer: alt + w
-keymap("n", "<A-w>", "<Cmd>Bdelete<CR>", opts) -- Delete buffer while preserving layout
 keymap("n", "<A-W>", "<Cmd>BufferLineCloseOthers<CR>", opts)
