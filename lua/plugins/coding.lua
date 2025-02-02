@@ -9,6 +9,7 @@ return {
                 "clangd",
                 "codelldb",
                 "pyright",
+                "rust-analyzer",
             })
         end,
     },
