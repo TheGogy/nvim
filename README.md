@@ -4,12 +4,16 @@ My neovim config for studying, using [lazyvim](https://lazyvim.org).
 For full functionality, you may want to check out my configurations for [tmux](https://github.com/TheGogy/tmux/) and [foot](https://github.com/TheGogy/dotfiles/blob/main/foot/foot.ini).
 
 ## Contents
-* [Installation](#installation)
-* [Keymaps](#Keymaps)
 
-# Installation 
+* [Installation](#installation)
+* [Keymaps](#keymaps)
+
+## Installation
+
 I'm using [paru](https://github.com/morganmilo/paru) as my AUR helper, make sure to change that to your package manager if required.
+
 ```bash
+
 # Backup current config
 mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.local/share/nvim ~/.local/share/nvim.bak
@@ -25,7 +29,7 @@ rm -rf ~/.config/nvim/.git
 nvim
 ```
 
-# Keymaps
+## Keymaps
 
 Most keymaps have already been set by lazyvim. For a list of these presets, see [here](https://www.lazyvim.org/keymaps).
 
@@ -46,7 +50,6 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 | `<ctrl>j`     | Extend cursor down                         |
 | `<ctrl>k`     | Extend cursor up                           |
 | `<ctrl>a`     | Add cursors to all words matching current  |
-
 
 > [!NOTE]
 > This setup is using a workaround for `alt` + `< >`, to ensure compatibility for foot terminal. If this is causing problem for your terminal, see [`keymaps.lua`](./lua/config/keymaps.lua).
