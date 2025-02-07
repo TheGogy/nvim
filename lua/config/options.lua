@@ -9,5 +9,5 @@ opt.shiftwidth = 4           -- Size of an indent
 opt.tabstop = 4              -- Number of spaces tabs count for
 opt.updatetime = 100         -- Get completions faster (default: 4000ms)
 
-vim.g.autoformat = false -- disable autoformat
+-- vim.g.autoformat = false -- disable autoformat
 vim.g.root_spec = { "cwd" }
