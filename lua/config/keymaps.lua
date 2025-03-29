@@ -4,6 +4,9 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- Remap escape key to be on home row
+keymap("i", "jk", "<Esc>", opts)
+
 -- Move to previous/next: alt + , .
 keymap("n", "<A-,>", "<Cmd>BufferLineCyclePrev<CR>", opts)
 keymap("n", "<A-.>", "<Cmd>BufferLineCycleNext<CR>", opts)

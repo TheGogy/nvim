@@ -5,32 +5,46 @@ return {
     ---@type snacks.Config
     opts = {
         bigfile = { enabled = true },
-        scroll  = { enabled = false },
+        scroll = { enabled = false },
         dashboard = {
             preset = {
                 header = [[
-⣿⠟⠛⢿⣦⡀⣿⡟⠛⠛⠛⣿⣷⣰⣿⠟⠛⢿⣷⡄⢠⣠⣤⣿⠻⠗⠀⣴⣿⠟⠛⢿⣦⣸⣿⣧⣾⡿⢛⣿⡿⠟⠻⣿⣦⠀
-⣿⡇⠀⠀⠀⣿⡇⣿⣷⣄⡀⠀⠉⠁⣿⣇⠀⠀⠀⣿⡇⣀⡉⠻⢿⣶⣄⡰⣿⣇⠀⠀⠀⣿⡿⣿⣿⣅⡀⢸⣿⡀⠀⠀⢸⣿⠀
-⠙⠿⣷⣶⣦⣿⡇⠛⠋⠛⢿⣷⣤⡀⠙⠿⣷⣶⡦⣿⡇⢿⣷⣶⣶⣿⣿⣿⠙⠿⣷⣶⡆⣿⡟⠛⠋⠻⢿⣶⣿⣿⣷⣶⣼⣿]],
+      |\__/,|   (`\\ ⠀
+  _.|o o  |_   ) )
+(((---(((--------]],
                 keys = {
                     { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
                     { icon = " ", key = "p", desc = "New File", action = ":ene | startinsert" },
-                    { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
-                    { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-                    { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
-                    { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+                    {
+                        icon = " ",
+                        key = "g",
+                        desc = "Find Text",
+                        action = ":lua Snacks.dashboard.pick('live_grep')",
+                    },
+                    {
+                        icon = " ",
+                        key = "r",
+                        desc = "Recent Files",
+                        action = ":lua Snacks.dashboard.pick('oldfiles')",
+                    },
+                    {
+                        icon = " ",
+                        key = "c",
+                        desc = "Config",
+                        action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+                    },
+                    {
+                        icon = "󰒲 ",
+                        key = "l",
+                        desc = "Lazy",
+                        action = ":Lazy",
+                        enabled = package.loaded.lazy ~= nil,
+                    },
                     { icon = " ", key = "q", desc = "Quit", action = ":qa" },
                 },
             },
             sections = {
                 { section = "header" },
-                {
-                    pane = 2,
-                    section = "terminal",
-                    cmd = "colorscript -e square",
-                    height = 5,
-                    padding = 1,
-                },
                 { section = "keys", gap = 1, padding = 1 },
                 {
                     pane = 2,
@@ -83,35 +97,105 @@ return {
                             height = 10,
                         },
                     }
-                    return vim.tbl_map(function(cmd)
-                        return vim.tbl_extend("force", {
-                            pane = 2,
-                            section = "terminal",
-                            enabled = in_git,
-                            padding = 1,
-                            ttl = 5 * 60,
-                            indent = 3,
-                        }, cmd)
-                    end, cmds)
                 end,
                 { section = "startup" },
             },
-        }
+        },
     },
     keys = {
-        { "<leader>.",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
-        { "<leader>S",  function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
-        { "<leader>n",  function() Snacks.notifier.show_history() end, desc = "Notification History" },
-        { "<leader>cR", function() Snacks.rename.rename_file() end, desc = "Rename File" },
-        { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse" },
-        { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },
-        { "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "Lazygit Current File History" },
-        { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
-        { "<leader>gl", function() Snacks.lazygit.log() end, desc = "Lazygit Log (cwd)" },
-        { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
-        { "<A-w>",      function() Snacks.bufdelete() end, desc = "Delete buffer" },
-        { "]]",         function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
-        { "[[",         function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
+        {
+            "<leader>.",
+            function()
+                Snacks.scratch()
+            end,
+            desc = "Toggle Scratch Buffer",
+        },
+        {
+            "<leader>S",
+            function()
+                Snacks.scratch.select()
+            end,
+            desc = "Select Scratch Buffer",
+        },
+        {
+            "<leader>n",
+            function()
+                Snacks.notifier.show_history()
+            end,
+            desc = "Notification History",
+        },
+        {
+            "<leader>cR",
+            function()
+                Snacks.rename.rename_file()
+            end,
+            desc = "Rename File",
+        },
+        {
+            "<leader>gB",
+            function()
+                Snacks.gitbrowse()
+            end,
+            desc = "Git Browse",
+        },
+        {
+            "<leader>gb",
+            function()
+                Snacks.git.blame_line()
+            end,
+            desc = "Git Blame Line",
+        },
+        {
+            "<leader>gf",
+            function()
+                Snacks.lazygit.log_file()
+            end,
+            desc = "Lazygit Current File History",
+        },
+        {
+            "<leader>gg",
+            function()
+                Snacks.lazygit()
+            end,
+            desc = "Lazygit",
+        },
+        {
+            "<leader>gl",
+            function()
+                Snacks.lazygit.log()
+            end,
+            desc = "Lazygit Log (cwd)",
+        },
+        {
+            "<leader>un",
+            function()
+                Snacks.notifier.hide()
+            end,
+            desc = "Dismiss All Notifications",
+        },
+        {
+            "<A-w>",
+            function()
+                Snacks.bufdelete()
+            end,
+            desc = "Delete buffer",
+        },
+        {
+            "]]",
+            function()
+                Snacks.words.jump(vim.v.count1)
+            end,
+            desc = "Next Reference",
+            mode = { "n", "t" },
+        },
+        {
+            "[[",
+            function()
+                Snacks.words.jump(-vim.v.count1)
+            end,
+            desc = "Prev Reference",
+            mode = { "n", "t" },
+        },
         {
             "<leader>N",
             desc = "Neovim News",
@@ -129,7 +213,7 @@ return {
                     },
                 })
             end,
-        }
+        },
     },
     init = function()
         vim.api.nvim_create_autocmd("User", {
@@ -150,9 +234,13 @@ return {
                 Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
                 Snacks.toggle.diagnostics():map("<leader>ud")
                 Snacks.toggle.line_number():map("<leader>ul")
-                Snacks.toggle.option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 }):map("<leader>uc")
+                Snacks.toggle
+                    .option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 })
+                    :map("<leader>uc")
                 Snacks.toggle.treesitter():map("<leader>uT")
-                Snacks.toggle.option("background", { off = "light", on = "dark", name = "Dark Background" }):map("<leader>ub")
+                Snacks.toggle
+                    .option("background", { off = "light", on = "dark", name = "Dark Background" })
+                    :map("<leader>ub")
                 Snacks.toggle.inlay_hints():map("<leader>uh")
             end,
         })
