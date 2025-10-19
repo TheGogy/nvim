@@ -53,3 +53,19 @@ Most keymaps have already been set by lazyvim. For a list of these presets, see 
 
 > [!NOTE]
 > This setup is using a workaround for `alt` + `< >`, to ensure compatibility for foot terminal. If this is causing problem for your terminal, see [`keymaps.lua`](./lua/config/keymaps.lua).
+
+## Basic lazygit config
+
+```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+gui:
+  sidePanelWidth: 0.2
+  nerdFontsVersion: "3"
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never
+
+```
